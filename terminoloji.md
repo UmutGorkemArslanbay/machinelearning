@@ -27,3 +27,5 @@
  - Bu örnek için de modelimiz [3,5,7,9] tahminlerini yaptığını varsayalım.
  # Residual Sum of Squares (SSres) ya da Explained Variance
  - Gerçek değerler ile tahminler arasında farkların karelerini alıp toplarız. SSres = 4
+ # Korelasyon
+  İki değişkenin arasındaki ilişkinin yönünü ve gücünü ölçen istatiksel bir ölçümdür.
