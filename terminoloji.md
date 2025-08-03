@@ -27,5 +27,9 @@
  - Bu örnek için de modelimiz [3,5,7,9] tahminlerini yaptığını varsayalım.
  # Residual Sum of Squares (SSres) ya da Explained Variance
  - Gerçek değerler ile tahminler arasında farkların karelerini alıp toplarız. SSres = 4
- # Korelasyon
+# Korelasyon
   İki değişkenin arasındaki ilişkinin yönünü ve gücünü ölçen istatiksel bir ölçümdür.
+# Bootstrap
+ Orjinal veri kümesinden aynı büyüklükte yeni bir veri kümesi oluşturulmak için with replacement ile rastgele örnekleme yapma yöntemidir.Herhangi bir veri birden fazla kez seçilebilir.
+ Örnek olarak orjinal veri Orijinal veri: [1,2,3,4,5,6,7,8,9,10]
+ Bootstrap örnek : [3,3,10,1,7,8,2,2,5,3]
