@@ -9,12 +9,10 @@ from sklearn.metrics import (
     accuracy_score,
     roc_auc_score,
     classification_report,
-    confusion_matrix,
-    roc_curve,
 )
 
 
-data_path = r"C:\Users\umut\Desktop\machinelearning\machinelearning\2-Supervised Learning\2.5-Logistic Regression\data\Boston.csv"
+data_path = ""
 
 def main():
     # Veri yükleme
