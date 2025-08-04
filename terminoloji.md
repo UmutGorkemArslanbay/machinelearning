@@ -33,3 +33,5 @@
  Orjinal veri kümesinden aynı büyüklükte yeni bir veri kümesi oluşturulmak için with replacement ile rastgele örnekleme yapma yöntemidir.Herhangi bir veri birden fazla kez seçilebilir.
  Örnek olarak orjinal veri Orijinal veri: [1,2,3,4,5,6,7,8,9,10]
  Bootstrap örnek : [3,3,10,1,7,8,2,2,5,3]
+# Accuracy
+ Doğruluk, modelin tüm tahminler içinde doğru yaptığı tahminlerin oranıdır.
