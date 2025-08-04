@@ -27,12 +27,12 @@ def main():
         "max_depth" : 5,
         "subsample" : 0.8, # Birden fazla ağaç kuracağı için bi rastgelelik olması gerekiyor ki ezber olmasın veya aynı yanlışlıklar olmasın bu yüzden train verisinin %80 'ini kullanacak. Ensemble çeşitliliği artar.
         "colsample_bytree" : 0.8, # Her ağacı kurarken features'da %80 'ini rastgele seçer.
-        "reg_lambda" : 1.0, # Ridge Regression katsayısı
-        "reg_alpha" : 0.0 # Lasso Regression katsayısı
+        "lambda" : 1.0, # Ridge Regression katsayısı
+        "alpha" : 0.0 # Lasso Regression katsayısı
     }
 
     
-    bst = xgb.train(
+    model = xgb.train(
         params,
         dtrain,
         num_boost_round=500,  # Maksimum oluşturulacak ağaç sayısıdır. (tur sayısı)
@@ -41,7 +41,7 @@ def main():
         verbose_eval=50 # Her 50 turda bir ekrana log basar, True tüm turlarda log bastırır.
     )
     
-    y_pred = bst.predict(dtest)
+    y_pred = model.predict(dtest)
     mse  = mean_squared_error(y_test, y_pred)
     rmse = np.sqrt(mse)
 
