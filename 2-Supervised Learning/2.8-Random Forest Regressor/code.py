@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.ensemble import RandomForestRegressor
 
-data_path = r"C:\Users\umut\Desktop\machinelearning\machinelearning\2-Supervised Learning\2.1-Linear Regression\data\Boston.csv"
+data_path = ""
 
 def main():
     # Veri yükleme

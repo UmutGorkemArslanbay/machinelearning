@@ -6,10 +6,12 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
+data_path = ""
+
 def main():
     
     # Datayı ilk başta okuyalım
-    df = pd.read_csv(r"C:\Users\umut\Desktop\video\ML_Tutorial\2-Supervised Learning\2.1-Linear Regression\data\boston.csv", index_col=0)
+    df = pd.read_csv(data_path, index_col=0)
     # print(df.head(5)) bunu etkinleştirerek okuyabilirsiniz veya csv'yi açıp bakabilirsiniz.
     
     X = df.drop("medv", axis=1) # medv sütununu kaldırdı

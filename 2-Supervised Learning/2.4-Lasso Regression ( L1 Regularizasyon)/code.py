@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import Lasso
 from sklearn.metrics import mean_squared_error, r2_score
 
-data_path = r"C:\Users\umut\Desktop\machinelearning\machinelearning\2-Supervised Learning\2.1-Linear Regression\data\Boston.csv"
+data_path = ""
 
 def main():
     # Veri yükleme
