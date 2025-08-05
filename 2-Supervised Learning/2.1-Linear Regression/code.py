@@ -6,13 +6,11 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
-data_path = ""
+data_path = "" # Dataset'in yolunu giriyoruz.
 
 def main():
-    
-    # Datayı ilk başta okuyalım
+    # Veri yükleme
     df = pd.read_csv(data_path, index_col=0)
-    # print(df.head(5)) bunu etkinleştirerek okuyabilirsiniz veya csv'yi açıp bakabilirsiniz.
     
     X = df.drop("medv", axis=1) # medv sütununu kaldırdı
     y = df["medv"] # medv sütunun y'ye taşıdı.
@@ -36,22 +34,10 @@ def main():
     coeffs = pd.Series(model.coef_, index=X.columns)
     print("Özellik katsayıları (en yüksekten en düşüğe):")
     print(coeffs.sort_values(ascending=False))
+
+    # R² score 0.67, 0.7 altında ala 1/3'ünü açıklayamadığı anlamına geliyor.
+    # MSE 24.29,
     
-    # Bunu grafiğe dökecek olursak
-    plt.figure(figsize=(6,6))
-    plt.scatter(y_test,y_pred,edgecolors="k")
-    plt.plot([y.min(), y.max()], [y.min(), y.max()], 'r--')
-    plt.xlabel("Gerçek medv")
-    plt.ylabel("Tahmin medv")
-    plt.title("Real vs Predict")
-    plt.tight_layout()
-    plt.show()
-
-
-    # Fotoğrafdaki kırmızı çizgi x ve y eşitlendiğinde noktalar bu çizgi üzerinde olur.
-    # Model ne kadar iyiyse noktalar bu çizgi etrafında yoğunlaşır.
-    # Model orta kısımlarda iyi bir sonuç göstermesine rağmen uçlardaki varyansyonları iyi yakalayamamış.
-    # Bu hatayı gidermek için daha farklı yöntemler kullanılabilir.
     
     
 if __name__ == "__main__":

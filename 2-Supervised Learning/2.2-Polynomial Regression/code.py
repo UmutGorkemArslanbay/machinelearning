@@ -7,12 +7,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
-data_path = ""
+data_path = "" # Dataset'in yolunu giriyoruz.
 
 def main():
-    # Veriyi yükleyelim
+    # Veri yükleme
     df = pd.read_csv(data_path, index_col=0)
-    # index_col = 0 indexi 1 den başlamasına yarar. 0'ı kaldırır.
     X = df.drop("medv",axis=1)
     y = df["medv"]
 
@@ -43,14 +42,9 @@ def main():
     print(f" • MSE: {mse:.2f}")
     print(f" • R² : {r2:.2f}\n")
     
-    plt.figure(figsize=(6,6))
-    plt.scatter(y_test, y_pred, edgecolor='k')
-    plt.plot([y.min(), y.max()], [y.min(), y.max()], 'r--')
-    plt.xlabel("Gerçek medv")
-    plt.ylabel("Tahmin edilen medv")
-    plt.title("Real vs Predict")
-    plt.tight_layout()
-    plt.show()
+    # R² score 0.81, hala iyileşmek için optimizasyon yapılabilir buna değineceğim.Bunun için acele etmeyelim.
+    # MSE 14.26
+    
 
 if __name__ == "__main__":
     main()

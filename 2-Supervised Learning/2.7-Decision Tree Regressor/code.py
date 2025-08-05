@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor, export_text
 from sklearn.metrics import mean_squared_error, r2_score
 
-data_path = ""
+data_path = "" # Dataset'in yolunu giriyoruz.
 
 def main():
     # Veri yükleme

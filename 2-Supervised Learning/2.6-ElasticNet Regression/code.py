@@ -7,13 +7,13 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.linear_model import ElasticNet
 
-data_path = ""
+data_path = "" # Dataset'in yolunu giriyoruz.
 
 alpha_enet = 0.1 # ElasticNet toplam ceza gücünü belirleyen parametredir.
-l1_ratio = 0.5 # 0 %100 Ridge cezası demek
-               # 1 %100 Lasso cezası demek
-               # 0.2 %20 Lasso %80 Ridge demek
-               # 0.8 %80 Lasso %20 Ridge demek
+l1_ratio = 0.5 # 0 %100 Ridge cezası demek.
+               # 1 %100 Lasso cezası demek.
+               # 0.2 %20 Lasso %80 Ridge demek.
+               # 0.8 %80 Lasso %20 Ridge demek.
 
 def main():
     # Veri yükleme

@@ -12,7 +12,7 @@ from sklearn.metrics import (
 )
 
 
-data_path = ""
+data_path = "" # Dataset'in yolunu giriyoruz.
 
 def main():
     # Veri yükleme

@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import Lasso
 from sklearn.metrics import mean_squared_error, r2_score
 
-data_path = ""
+data_path = "" # Dataset'in yolunu giriyoruz.
 
 def main():
     # Veri yükleme
