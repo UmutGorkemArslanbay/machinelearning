@@ -6,20 +6,20 @@
   Her düğümde (node) bir özellik ve bir threshold (eşik) seçilerek veriyi iki parçaya ("sol" ve "sağ") böler.
   Amaç, her iki parçanın içinde hedef değerlerin varyansını en çok düşüren bölünmeyi bulmak.
 
-  Bunu şimdi daha örnekleştirelim
+  Bunu şimdi daha örnekleştirelim.
   5 adet medv değerleri olsun elimde [10,12,11,29,31]
   Ortalama 18.6
   Parent Varyans = 87.44 civarı
-  threshold = 20 olsun
+  threshold = 20 olsun.
 
-  Sol parçayı medv < 20 sağ parçası 20 > medv olarak düşünelim
+  Sol parçayı medv < 20 sağ parçası 20 > medv olarak düşünelim.
 
   Sol parça için [10,12,11]       Sağ parça için [29,31]
   Ortalamas = 11                  Ortalaması = 30
   Varyans = 0.67                  Varyans = 1
 
 
-  Şimdi ağırlıklı ortalama varyansı hesaplayalım
+  Şimdi ağırlıklı ortalama varyansı hesaplayalım.
   Sol parça 3 örnek Sağ parça 2 örnek Toplam = 5
   VarSol = 0.67 VarSağ = 1
   Split Varyans = 3/5 x 0.67 + 2/5 x 1 = 0.80
@@ -28,7 +28,7 @@
   Split Varyans = 0.80
   Varyans azalması = 86.64
 
-  Şimdi de threshold = 11 yapalım
+  Şimdi de threshold = 11 yapalım.
 
   Sol parça için [10,11]       Sağ parça için [12,29,31]
   Ortalamas = 10.5             Ortalaması = 24
